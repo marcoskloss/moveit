@@ -16,3 +16,25 @@
   gap: 6.25rem;
   align-content: center;
 }
+
+@media screen and (max-width: 660px) {
+  .container section {
+    grid-template-columns: 90%;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .container section {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+}
