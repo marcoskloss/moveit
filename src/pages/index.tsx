@@ -1,62 +1,21 @@
-import Head from 'next/head'
-import { GetServerSideProps } from 'next'
-
-import { CompletedChallenges } from "../components/CompletedChallenges"
-import { Countdown } from "../components/Countdown"
-import { ExperienceBar } from "../components/ExperienceBar"
-import { Profile } from '../components/Profile'
-import { ChallengeBox } from "../components/ChallengeBox"
-
+import { LoginBox } from '../components/LoginBox'
 import styles from '../styles/pages/Home.module.css'
-import { CountdownProvider } from '../contexts/CountdownContext'
-import { ChallengesProvider } from '../contexts/ChallengesContexts'
 
-interface HomeProps {
-  level: number
-  currentExperience: number
-  challengesCompleted: number
-}
-
-export default function Home(props: HomeProps) {
+export default function Home() {
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Início | move.it</title>
-        </Head>
+    <div className={styles.container}>
+      <img src="/background-image.png" />
+      <section>
+        <img src="/logo-full.svg" alt="Move it" />
 
-        <ExperienceBar />
+        <h1>Bem-vindo</h1>
+        <div>
+          <img src="/icons/Github.svg" alt="Github" />
+          <span>Faça login com seu Github para começar.</span>
+        </div>
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
-    </ChallengesProvider>
+        <LoginBox />
+      </section>
+    </div>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { level, challengesCompleted, currentExperience } = context.req.cookies
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
-    }
-  }
 }
