@@ -32,7 +32,7 @@ Move.it é uma aplicação de controle de tempo no estilo pomodoro, onde o usuá
 
 ## 🚀🔥 Milha Extra
 
-Adicionei ao layout original responsividade para ser adaptável a diferentes tamanho de telas, além disso codifiquei a página de login que utiliza a API do Github para carregar a foto e o username do usuário.
+Adicionei ao layout original responsividade para ser adaptável a diferentes tamanhos de tela, além disso codifiquei a página de login que utiliza a API do Github para carregar a foto e o username do usuário.
 
 
 ---
@@ -42,7 +42,7 @@ Adicionei ao layout original responsividade para ser adaptável a diferentes tam
 ```bash
 
     # Clonar o repositório
-    $ git clone https://github.com/filipeleonelbatista/dev-finances.git
+    $ git clone https://github.com/marcoskloss/moveit.git
 
     # Entrar no diretório
     $ cd moveit
