@@ -17,6 +17,18 @@
   align-content: center;
 }
 
+@media screen and (max-width: 1359px) {
+  .container section {
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container section {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 660px) {
   .container section {
     grid-template-columns: 90%;

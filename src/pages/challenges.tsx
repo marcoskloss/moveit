@@ -8,8 +8,10 @@ import { Profile } from '../components/Profile'
 import { ChallengeBox } from "../components/ChallengeBox"
 
 import styles from '../styles/pages/Challenges.module.css'
+
 import { CountdownProvider } from '../contexts/CountdownContext'
 import { ChallengesProvider } from '../contexts/ChallengesContexts'
+import { Sidebar } from '../components/Sidebar'
 
 interface ChallengesProps {
   level: number
@@ -18,6 +20,7 @@ interface ChallengesProps {
 }
 
 export default function Challenges(props: ChallengesProps) {
+
   return (
     <ChallengesProvider
       level={props.level}
@@ -32,6 +35,7 @@ export default function Challenges(props: ChallengesProps) {
         <ExperienceBar />
 
         <CountdownProvider>
+          <Sidebar />
           <section>
             <div>
               <Profile />

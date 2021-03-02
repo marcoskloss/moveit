@@ -1,7 +1,9 @@
 import { LoginBox } from '../components/LoginBox'
+
 import styles from '../styles/pages/Home.module.css'
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <img src="/background-image.png" />
@@ -11,9 +13,8 @@ export default function Home() {
         <h1>Bem-vindo</h1>
         <div>
           <img src="/icons/Github.svg" alt="Github" />
-          <span>Faça login com seu Github para começar.</span>
+          <span>Entre com seu Github para começar.</span>
         </div>
-
         <LoginBox />
       </section>
     </div>

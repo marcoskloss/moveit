@@ -24,7 +24,6 @@
   opacity: 1;
 }
 
-
 .loginContainer button {
   width: 20%;
   height: 100%;
@@ -37,6 +36,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: filter .3s;
+}
+
+.loginContainer button:hover {
+  filter: brightness(90%);
 }
 
 

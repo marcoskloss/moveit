@@ -1,0 +1,56 @@
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 5rem;
+  height: 100vh;
+
+  background: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar > img {
+  position: absolute;
+  top: 0;
+  margin: 2rem;
+}
+
+.sidebar nav, .sidebar ul{
+  width: 100%;
+}
+
+.sidebar li {
+  height: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: background .3s;
+}
+
+.sidebar li:hover {
+  background: rgb(235, 234, 238);
+}
+
+.active {
+  border-left: .3rem solid var(--blue);
+}
+
+.sidebar nav img {
+  position: relative;
+}
+
+@media screen and (max-width: 960px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+
+
