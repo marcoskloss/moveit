@@ -55,7 +55,6 @@
 
 @media screen and (max-width: 960px) {
   .container section {
-    border: 1px solid blue;
     right: 50%;
     transform: translateX(50%);
   }
